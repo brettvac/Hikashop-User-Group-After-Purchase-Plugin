@@ -1,36 +1,36 @@
-# Hikashop Group Plugin
+# Hikashop User Group After Purchase Plugin
 
-This plugin enables you to change the group of a user after purchasing a product in Hikashop Starter. 
-
-Works with Joomla! 4 and is backward compatible with Joomla! 5. I believe this plugin ships with the Business edition.
+This plugin enables you to change the group of a user after purchase of a product. 
 
 ## Description
-The Hikashop Group Plugin allows you to automatically add a user to a new group in Joomla after they purchase a specific product in Hikashop Starter. This is useful for managing user permissions and access based on their purchases.
+The Hikashop Group Plugin allows you to automatically add a user to a new group in Joomla after they purchase a specific product in Hikashop Starter or Hikashop Essential. 
 
-## Features
-- Changes user group after product purchase
-- Configurable option to force user logout on group update
-- Works with Joomla session handler set to database mode
+This is useful for managing user access based on a purchase. 
 
-## Configuration Options
-- **Parameter:** `force_logout`  
-  - **Type:** Radio  
-  - **Default:** 1 (Yes)  
-  - **Description:** Force user logout on group update (only with Joomla session handler option set to use the database).  
-  - **Options:**  
-    - 0: No  
-    - 1: Yes  
+For example, you may want to sell access to a digital course that requires enrollment based on a user's group. This plugin allows you to sell access to that course using Hikashop.
 
 ## Installation
 1. Go to System > Install and choose Extensions
 2. Choose Install from URL and use: [https://github.com/brettvac/hikashop-user-group/archive/refs/heads/main.zip](https://github.com/brettvac/hikashop-user-group/archive/refs/heads/main.zip)
 4. Enable the plugin
-5. Choose the user group after purchase in the product options
+5. In the Hikashop Product configuration, choose the user group after purchase in the product options
 
 ## Files
 - `group.php` - Main plugin file
 - `group.xml` - Manifest file
 
-###Original source of this plugin
+## Notes On The Original Source of this Plugin
 The code for this plugin originates from this forum post: [https://www.hikashop.com/forum/orders-management/866710-user-group-after-purchase-with-multiple-purchase.html#148692](https://www.hikashop.com/forum/orders-management/866710-user-group-after-purchase-with-multiple-purchase.html#148692). 
-I simply asked ChatGPT to update the parts that weren't working in Joomla! 4.
+
+### Changes made to the old version 2 plugin
+The following changes were made to the old version of the Joomla! plugin, which worked with Joomla! version 1-3 but lacked best practices for Joomla! versions 4 and up.
+- Removec version compare for versions older than 1.6
+- Added language strings that ship with versions of Hikashop that don't include the plugin
+- Switched to using fully qualified names instead of the JPlugin: `extends \Joomla\CMS\Plugin\CMSPlugin`
+- Standardized the backend view to look like other plugins such as [Product Order History](https://www.hikashop.com/marketplace/product/254-product-order-history.html)
+- Replaced all JFactory calls with Factory
+- Replaced database access with the container-based driver
+- Removed all JVERSION conditionals (kept only the modern branch)
+- Replaced jimport with use statements that appear prior to the class statement
+- Modernized the admin check but kept `$mainframe` instead of the more common `$app`
+- Switched to Access and modern user handling
