@@ -22,13 +22,12 @@ The code for this plugin originates from this forum post: [https://www.hikashop.
 
 ### Changes made to the old version 2 plugin
 The following changes were made to the old version of the Joomla! plugin, which worked with Joomla! version 1-3 but lacked best practices for Joomla! versions 4 and up.
-- Removec version compare for versions older than 1.6
 - Added language strings that ship with versions of Hikashop that don't include the plugin
 - Switched to using fully qualified names instead of the JPlugin: `extends \Joomla\CMS\Plugin\CMSPlugin`
 - Standardized the backend view to look like other plugins such as [Product Order History](https://www.hikashop.com/marketplace/product/254-product-order-history.html)
 - Replaced all JFactory calls with Factory
 - Replaced database access with the container-based driver
-- Removed all JVERSION conditionals (kept only the modern branch)
+- Removed all JVERSION conditionals for versions older than 1.6
 - Replaced jimport with use statements that appear prior to the class statement
 - Modernized the admin check but kept `$mainframe` instead of the more common `$app`
 - Switched to Access and modern user handling
