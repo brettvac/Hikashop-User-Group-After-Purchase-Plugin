@@ -3,9 +3,7 @@
 This plugin enables you to change the group of a user after purchase of a product. 
 
 ## Description
-The Hikashop Group Plugin allows you to automatically add a user to a new group in Joomla after they purchase a specific product in Hikashop Starter or Hikashop Essential. 
-
-This is useful for managing user access based on a purchase. 
+The Hikashop User Group After Purchase Plugin allows you to automatically add a user to a new group in Joomla after they purchase a specific product in Hikashop Starter or Hikashop Essential. 
 
 For example, you may want to sell access to a digital course that requires enrollment based on a user's group. This plugin allows you to sell access to that course using Hikashop.
 
