@@ -7,16 +7,6 @@ The Hikashop User Group After Purchase Plugin allows you to automatically add a 
 
 For example, you may want to sell access to a digital course that requires enrollment based on a user's group. This plugin allows you to sell access to that course using Hikashop.
 
-## Installation
-1. Go to System > Install and choose Extensions
-2. Choose Install from URL and use: [https://github.com/brettvac/hikashop-user-group/archive/refs/heads/main.zip](https://github.com/brettvac/hikashop-user-group/archive/refs/heads/main.zip)
-4. Enable the plugin
-5. In the Hikashop Product configuration, choose the user group after purchase in the product options
-
-## Files
-- `group.php` - Main plugin file
-- `group.xml` - Manifest file
-
 ## Notes On The Original Source of this Plugin
 The code for this plugin originates from this forum post: [https://www.hikashop.com/forum/orders-management/866710-user-group-after-purchase-with-multiple-purchase.html#148692](https://www.hikashop.com/forum/orders-management/866710-user-group-after-purchase-with-multiple-purchase.html#148692). 
 
