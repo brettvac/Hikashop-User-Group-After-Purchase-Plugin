@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<changelogs>
+    <changelog>
+        <element>group</element>
+        <type>plugin</type>
+        <version>1.0</version>
+        <addition>
+            <item>Initial release of the Hikashop User Group After Purchase Plugin.</item>
+        </addition>
+    </changelog>
+</changelogs>
