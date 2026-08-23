@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="hikashop" method="upgrade">
+ <name>PLG_HIKASHOP_GROUP</name>
+ <version>1.0</version>
+ <description>PLG_HIKASHOP_GROUP_DESCRIPTION</description>
+ <author>Hikashop, Brett Vachon</author>
+ <creationDate>2025-03-21</creationDate>
+ <copyright>(C) 2010-2026 HIKARI SOFTWARE. Updates (C) 2025-2026 Brett Vachon.</copyright>
+ <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	
+  <files>
+		<filename plugin="group">group.php</filename>
+	</files>
+
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_hikashop_group.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_hikashop_group.sys.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.plg_hikashop_group.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.plg_hikashop_group.sys.ini</language>
+  </languages>
+
+  <params addpath="/components/com_hikashop/params">
+		<param name="force_logout" type="radio" default="1" label="HIKA_FORCE_USER_LOGOUT_ON_GROUP_UPDATE" description="FORCE_USER_LOGOUT_ON_GROUP_UPDATE">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</param>
+	</params>
+	
+  <config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field name="force_logout" type="radio" default="1" label="HIKA_FORCE_USER_LOGOUT_ON_GROUP_UPDATE" description="FORCE_USER_LOGOUT_ON_GROUP_UPDATE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+  
+  <updateservers>
+	  <server type="extension" priority="1">https://raw.githubusercontent.com/brettvac/Hikashop-User-Group-After-Purchase-Plugin/refs/heads/main/update/updates.xml</server>
+  </updateservers>
+
+  <changelogurl>https://raw.githubusercontent.com/brettvac/Hikashop-User-Group-After-Purchase-Plugin/refs/heads/main/update/changelog.xml</changelogurl>
+
+</extension>
